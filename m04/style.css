@@ -1,0 +1,97 @@
+/* adds global text styles */
+* {
+  font-family: Arial, Verdana, sans-serif;
+  color: #665544;
+  text-align: center;
+}
+
+/* makes body less wide and centered, with a background image */
+body {
+  width: 90%;
+  margin: 0 auto;
+  background-image: url("https://wallpapers.com/images/featured/flower-field-iqpyyudehw35liwy.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+/* adds Liera font to the header */
+#header h1 {
+  font-family: "LieraSansRegular", Arial, sans-serif;
+}
+
+/* allows content to scroll if it overflows */
+#content {
+  overflow: auto;
+}
+
+/* adds margin to the navigation and footer sections */
+#nav,
+#footer {
+  margin: 1%;
+}
+
+/* adds a separate background color to the navigation section */
+#nav {
+  margin: 1%;
+  background-color: #aec6cf;
+  padding: 0.5em 0;
+}
+
+/* adds a separate background color to the footer section */
+#footer {
+  margin: 1%;
+  background-color: #b19cd9;
+  padding: 0.5em 0;
+}
+
+/* sets the width of the content columns so that they are equally spread across 3 */
+.column1,
+.column2,
+.column3 {
+  width: 31.3%;
+  float: left;
+  margin: 1%;
+}
+
+/* adds a background color to the first column */
+.column1 {
+  background-color: #ffb3ba;
+}
+
+/* adds a background color to the second column */
+.column2 {
+  background-color: #bae1ff;
+}
+
+/* adds a background color to the third column */
+.column3 {
+  margin-right: 0%;
+  background-color: #baffc9;
+}
+
+/* styles the navigation list items to be inline and adds padding */
+li {
+  display: inline;
+  padding: 0.5em;
+}
+
+/* adds backgorund image to feature section */
+#feature {
+  margin: 1%;
+  background-image: url("https://images.pexels.com/photos/33044/sunflower-sun-summer-yellow.jpg?cs=srgb&dl=pexels-pixabay-33044.jpg&fm=jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 15em;
+  margin-bottom: 1em;
+  position: relative;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* styles the article sections to have a height and margin */
+.article {
+  height: 10em;
+  margin-bottom: 1em;
+}
