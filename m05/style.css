@@ -1,7 +1,8 @@
-/* Import custom font for the application */
+/* mainly copy pasted styles from bullseye page, still added comments to the classes just to follow instructions */
+
 @import url(https://fonts.googleapis.com/css?family=Wellfleet);
 
-/* Base styling for the entire page */
+/* body styling, applying background color and universal font settings */
 body {
   background-color: #523620;
   color: #fff;
@@ -10,7 +11,7 @@ body {
   margin: 0px 0px 0px 0px;
 }
 
-/* Logo styling with background image */
+/* changes h1 to have picture as background */
 h1 {
   background-image: url("./bullseye-logo.png");
   background-repeat: no-repeat;
@@ -22,44 +23,21 @@ h1 {
   margin: 40px auto;
 }
 
-/* Teacher image positioning for page 1 */
-#teacher {
-  float: right;
-  margin: 0px 30px 0px 0px;
-}
-
-/* Teacher image positioning for page 2 */
+/* positioning teacher image */
 #teacher2 {
   float: right;
   margin: 135px 30px 0px 0px;
 }
 
-/* Main content container styling */
-#page1,
+/* styles main page */
 #page2 {
   background-color: #fecc6f;
-  height: 596px;
+  height: 730px;
   padding: 10px;
   min-width: 779px;
 }
 
-/* Specific height adjustment for page 2 */
-#page2 {
-  height: 730px;
-}
-
-/* Answer display area styling */
-#answer {
-  border: 12px double #fff;
-  color: #523620;
-  text-align: left;
-  padding: 20px;
-  margin: 70px auto 10px auto;
-  width: 250px;
-  text-align: center;
-}
-
-/* Blackboard styling for math problems display */
+/* blackboard */
 #blackboard {
   background-color: #425a5a;
   border: 25px solid #523620;
@@ -71,7 +49,7 @@ h1 {
   text-align: center;
 }
 
-/* Multiplication table heading styling */
+/* modifies "Multiplication Table" heading */
 #blackboard h2 {
   color: #fff;
   margin-bottom: 20px;

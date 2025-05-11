@@ -1,5 +1,6 @@
 // use prompt() to get number
-const table = parseInt(prompt("Enter a number for the multiplication table:"));
+const table =
+  parseInt(prompt("Enter a number for the multiplication table:")) || 0;
 
 var msg = "<h2>Multiplication Table</h2>";
 
