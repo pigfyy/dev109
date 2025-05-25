@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Franklin Zhang" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A3 - Creating a rhombus using JS, drawing all 4 quadrants"
+    />
+    <title>A3 - Create a Rhombus</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Rhombus Generator</h1>
+
+      <!-- form to collect information about the rhombus before it's made using the rhombus script -->
+      <div>
+        <div>
+          <label>What is the size of Rhombus?</label><br />
+          <input type="text" id="rHeight" value="5" size="5" />
+        </div>
+
+        <div>
+          <label>Choose color for Even position</label><br />
+          <select id="colorEven">
+            <option value="#0000FF">Blue</option>
+            <option value="#FF0000">Red</option>
+            <option value="#FF9900">Orange</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Choose color for Odd position</label><br />
+          <select id="colorOdd">
+            <option value="#FF0099">Pink</option>
+            <option value="#33FF00">Green</option>
+            <option value="#660099">Purple</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Choose symbol for Rhombus</label>
+          <select id="symbol">
+            <option value="*">*</option>
+            <option value="$">$</option>
+            <option value="@">@</option>
+          </select>
+        </div>
+
+        <!-- when the button is clicked, it creates the rhombus in the rhombus container using the createRhombus function-->
+        <button
+          onclick="createRhombus(
+                document.getElementById('rHeight').value,
+                document.getElementById('colorEven').value,
+                document.getElementById('colorOdd').value,
+                document.getElementById('symbol').value
+            );"
+        >
+          Display Rhombus
+        </button>
+      </div>
+
+      <!-- container to display the rhombus, with 4 distinct quadrants -->
+      <div class="rhombus-display">
+        <div class="rhombus-container">
+          <div id="upLeft" class="rhombus-left"></div>
+
+          <div id="upRight" class="rhombus-right"></div>
+
+          <div id="downLeft" class="rhombus-left"></div>
+
+          <div id="downRight" class="rhombus-right"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="rhombus.js"></script>
+  </body>
+</html>

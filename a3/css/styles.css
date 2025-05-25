@@ -1,0 +1,48 @@
+/* centering the rhombus container and makes it so that the dotted border line doesn't span the width of the page */
+.rhombus-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* using grid and template columns to create the 2x2 shape */
+.rhombus-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* rhombus on the left is aligned to the right */
+.rhombus-left {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+/* rhombus on the right is aligned to the left */
+.rhombus-right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/* adding dotted line between the four quadrants of the rhombus */
+
+#upLeft {
+  border-bottom: 1px dotted #333;
+  border-right: 1px dotted #333;
+}
+
+#upRight {
+  border-bottom: 1px dotted #333;
+  border-left: 1px dotted #333;
+}
+
+#downLeft {
+  border-top: 1px dotted #333;
+  border-right: 1px dotted #333;
+}
+
+#downRight {
+  border-top: 1px dotted #333;
+  border-left: 1px dotted #333;
+}
