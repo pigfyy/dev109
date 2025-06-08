@@ -1,0 +1,43 @@
+/* adding a light background color */
+body {
+  font-family: Arial, sans-serif;
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* adding white background so that text can stand out better, as well as some other attributes to try and make it a little prettier */
+form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid grey;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+/* adding gap between different fields */
+form p {
+  margin-bottom: 15px;
+}
+
+/* making labels stand out more by adding bold text weight */
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: darkslategray;
+}
+
+/* class was originally gotten from the downloaded zip */
+.warning {
+  color: red;
+  font-weight: bold;
+  /* undoing the bottom margin on fields */
+  margin-top: -10px;
+}
