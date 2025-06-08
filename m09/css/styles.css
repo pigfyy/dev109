@@ -157,3 +157,10 @@ p {
     background-size: 72px 72px;
   }
 }
+
+/* added slack post image, using margin auto on the x axis to center is horizontally */
+.slack-post {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
