@@ -93,19 +93,26 @@ function email() {
 // checks phone number
 function phone() {
   var validPhone = false;
-  var phone = document.getElementById("Phone").value;
+  var phoneInput = document.getElementById("Phone");
+  var phone = phoneInput.value;
   var errorMessages = "";
-
-  // E.C. --- use regex found at https://stackoverflow.com/questions/31143315/regex-phone-number-with-dashes
-  var phoneRegex = /^(1-)?\d{3}-\d{3}-\d{4}$/;
 
   if (phone === null || phone === "") {
     errorMessages += '<p style="color: red;">Phone number is required</p>';
-  } else if (!phone.match(phoneRegex)) {
-    errorMessages +=
-      '<p style="color: red;">Invalid phone number format (e.g., 1-XXX-XXX-XXXX or XXX-XXX-XXXX)</p>';
   } else {
-    validPhone = true;
+    // first remove all non number chars
+    var cleanedPhone = phone.replace(/\D/g, "");
+
+    // E.C. --- use regex found at https://stackoverflow.com/questions/31143315/regex-phone-number-with-dashes
+    var phoneRegex = /^(\d{3})(\d{3})(\d{4})$/;
+
+    if (cleanedPhone.match(phoneRegex)) {
+      phoneInput.value = cleanedPhone.replace(phoneRegex, "$1-$2-$3");
+      validPhone = true;
+    } else {
+      errorMessages +=
+        '<p style="color: red;">Invalid phone number format (XXX-XXX-XXXX)</p>';
+    }
   }
 
   document.getElementById("phoneerror").innerHTML = errorMessages;
