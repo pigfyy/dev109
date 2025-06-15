@@ -1,0 +1,97 @@
+/* resetting browser defaults to prevent weird behavior */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* centering the body */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* timer display */
+.timer-display {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  z-index: 1000;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* container for the slideshow, limits the width, centers it */
+.slideshow-container {
+  max-width: 100%;
+  width: 800px;
+  margin: auto;
+  background-color: white;
+}
+
+/* setting default width / height styling for slides and also hiding them by default */
+.slide {
+  display: none;
+  width: 100%;
+}
+
+/* styling images to take up the maximum size of the .slide container */
+.slide img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* styling for the description text */
+.description {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.description h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.description p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* container for nav buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+}
+
+/* nav button styling */
+.prev,
+.next {
+  cursor: pointer;
+  padding: 12px 24px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #4caf50;
+  background-color: white;
+  color: #4caf50;
+  min-width: 120px;
+}
