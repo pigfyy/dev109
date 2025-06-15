@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta
+      name="description"
+      content="EC1 - Extra Credit 1 --- Creating an iSpy game with a map of images with clickable areas"
+    />
+    <title>EC1 - I Spy Game</title>
+  </head>
+  <body>
+    <!-- header with instructions -->
+    <header>
+      <h1>I Spy Game</h1>
+      <p class="instructions">
+        Find all the hidden objects in the picture by clicking on them. Each
+        object you find will be crossed out from the list. Reload to start over
+        with a random level.
+      </p>
+
+      <div class="font-bold" id="progress-text">Found 0 of 0 items</div>
+    </header>
+
+    <!-- game area, has game image on the left and object list on the right. game image has all the images and all of their mapping but is hidden by js by default -->
+    <div class="game-area">
+      <!-- image 1 -->
+      <img
+        id="game-image-1"
+        src="./images/ispy1.jpg"
+        class="game-image"
+        usemap="#level1-map"
+        alt="I Spy Game Image Level 1"
+        style="display: none"
+      />
+      <map name="level1-map" id="level1-map">
+        <area
+          id="water-gun"
+          alt="Water gun"
+          title="Water gun"
+          coords="304,227,247,164"
+          shape="rect"
+          href="#"
+        />
+        <area
+          id="grey-sunglasses"
+          alt="Grey sunglasses"
+          title="Grey sunglasses"
+          coords="166,100,201,92,230,73,225,51,201,55,164,86,162,95"
+          shape="poly"
+          href="#"
+        />
+        <area
+          id="football"
+          alt="Football"
+          title="Football"
+          coords="108,242,91,216,55,209,42,217,48,236,64,250,91,252"
+          shape="poly"
+          href="#"
+        />
+        <area
+          id="beachball"
+          alt="Beachball"
+          title="Beachball"
+          coords="571,343,72"
+          shape="circle"
+          href="#"
+        />
+      </map>
+
+      <!-- image 2 -->
+      <img
+        id="game-image-2"
+        src="./images/ispy2.jpg"
+        class="game-image"
+        usemap="#level2-map"
+        alt="I Spy Game Image Level 2"
+        style="display: none"
+      />
+      <map name="level2-map" id="level2-map">
+        <area
+          id="rail"
+          alt="Rail"
+          title="Rail"
+          coords="217,97,229,82,165,3,146,9,166,46,191,79"
+          shape="poly"
+          href="#"
+        />
+        <area
+          id="scissors"
+          alt="Scissors"
+          title="Scissors"
+          coords="166,366,128,330,152,316,192,274,211,284,185,325,183,355"
+          shape="poly"
+          href="#"
+        />
+        <area
+          id="spoon"
+          alt="Spoon"
+          title="Spoon"
+          coords="96,229,57,160,37,127,46,106,71,118,81,160,104,218,97,221"
+          shape="poly"
+          href="#"
+        />
+        <area
+          id="hourglass"
+          alt="Hourglass"
+          title="Hourglass"
+          coords="454,325,531,366"
+          shape="rect"
+          href="#"
+        />
+      </map>
+
+      <!-- image 3 -->
+      <img
+        id="game-image-3"
+        src="./images/ispy3.jpg"
+        class="game-image"
+        usemap="#level3-map"
+        alt="I Spy Game Image Level 3"
+        style="display: none"
+      />
+      <map name="level3-map" id="level3-map">
+        <area
+          id="baby-doll"
+          alt="Baby doll"
+          title="Baby doll"
+          coords="80,77,124,15"
+          shape="rect"
+          href="#"
+        />
+        <area
+          id="drum"
+          alt="Drum"
+          title="Drum"
+          coords="441,114,488,160"
+          shape="rect"
+          href="#"
+        />
+        <area
+          id="sheep"
+          alt="Sheep"
+          title="Sheep"
+          coords="224,153,294,198"
+          shape="rect"
+          href="#"
+        />
+      </map>
+
+      <!-- object lists, hard coded for simplicity with all the different items for different images which are similarly hidden until js shows one -->
+      <div class="objects-list">
+        <h3>Find These Items:</h3>
+
+        <ul
+          id="objects-list-1"
+          class="objects-list-level"
+          style="display: none"
+        >
+          <li id="list-water-gun">Water gun</li>
+          <li id="list-grey-sunglasses">Grey sunglasses</li>
+          <li id="list-football">Football</li>
+          <li id="list-beachball">Beachball</li>
+        </ul>
+
+        <ul
+          id="objects-list-2"
+          class="objects-list-level"
+          style="display: none"
+        >
+          <li id="list-rail">Rail</li>
+          <li id="list-scissors">Scissors</li>
+          <li id="list-spoon">Spoon</li>
+          <li id="list-hourglass">Hourglass</li>
+        </ul>
+
+        <ul
+          id="objects-list-3"
+          class="objects-list-level"
+          style="display: none"
+        >
+          <li id="list-baby-doll">Baby doll</li>
+          <li id="list-drum">Drum</li>
+          <li id="list-sheep">Sheep</li>
+        </ul>
+      </div>
+    </div>
+
+    <button id="play-again-btn" style="display: none" class="mx-auto mt-4">
+      Play again with random level
+    </button>
+
+    <script src="./js/game.js"></script>
+  </body>
+</html>
