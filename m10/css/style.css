@@ -1,0 +1,9 @@
+body {
+  background: beige;
+}
+
+/* makes dot circles */
+.dot {
+  border-radius: 50%;
+  position: absolute;
+}

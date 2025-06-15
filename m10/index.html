@@ -10,5 +10,24 @@
     />
     <title>M10 - Module Assignment</title>
   </head>
-  <body></body>
+  <body>
+    <!-- controls form to allow user to clear dots, or modify their color / size -->
+    <div>
+      <button id="clear-btn">Clear</button>
+      <label for="color-select">Color:</label>
+      <select id="color-select">
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="black">Black</option>
+        <option value="purple">Purple</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="pink">Pink</option>
+      </select>
+      <label for="size-input">Size:</label>
+      <input type="number" id="size-input" value="8" min="5" max="50" />
+    </div>
+    <script src="js/add-dots.js"></script>
+  </body>
 </html>
